@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
+mongoose.connect(process.env.MONGODB_URL);
 
-mongoose.connect('mongodb+srv://20521841:291101@cluster0.4kmc2yl.mongodb.net/', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
 
 const Schema = mongoose.Schema;
 

@@ -13,8 +13,10 @@
     "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
     "crypto": "^1.0.1",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.6.0",
     "mongoose": "^7.2.2",
     "mssql": "^9.1.1",
     "Parser": "^0.0.1"
