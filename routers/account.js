@@ -275,7 +275,7 @@ router.post('/delete', checkLogin, checkAdmin, (req, res, next)=>{
     })
 })
 
-router.get('/admin', checkLogin, checkAdmin, (req, res, next)=>{
+router.get('/admin', checkLogin, (req, res, next)=>{
     res.sendFile(path.join(__dirname, '../admin.html'))
 })
 
