@@ -7,7 +7,7 @@ const { json } = require('body-parser');
 const PAGE_SIZE = 100
 var secretKey = fs.readFileSync('./key/keyforpassword.pem');
 var privateKey = fs.readFileSync('./key/private.pem')
-var publicKey = fs.readFileSync('./key/public.crt')
+var publicKey = fs.readFileSync('./key/public.pem')
 const path = require('path')
 const jwt = require('jsonwebtoken')
 const cookieParser = require('cookie-parser')
@@ -84,7 +84,7 @@ router.post('/login', (req, res, next)=>{
         if(data){
             var token = jwt.sign({
                 _id: data._id
-            }, privateKey, { algorithm: 'RS256' })
+            }, privateKey, { algorithm: 'ES256' })
             res.json({
                 message: 'ok',
                 token: token
